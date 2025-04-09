@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.10)
+project(ChessBot)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+file(GLOB_RECURSE SOURCES "ChessBot/**.cpp")
+file(GLOB_RECURSE HEADERS "ChessBot/include/**.h" "ChessBot/include/**.hpp")
+
+include_directories("ChessBot/include")
+
+add_executable(ChessBot ${SOURCES} ${HEADERS})
+
